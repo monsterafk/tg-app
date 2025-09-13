@@ -8,6 +8,7 @@ export default function App() {
     if (window.Telegram?.WebApp) {
       const tg = window.Telegram.WebApp;
       tg.ready();
+      console.log(tg);
       setUsername(tg.initDataUnsafe?.user?.first_name || "Гость");
       setInitData(tg.initDataUnsafe);
       tg.expand();
